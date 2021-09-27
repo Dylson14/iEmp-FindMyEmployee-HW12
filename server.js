@@ -7,11 +7,13 @@ const employeeArr = [];
 
 const Start = () => {
   inquirer.prompt(menuPrompt).then((answers) => {
-    console.log(`These are the ${answers}`);
-    console.table(department);
-    
+        /* returns something weird like [object object] */
+        console.log( `These are the ${answers}`); 
 
-
+    if (answers.mainMenu === "View All Departments") {
+        /* the department table created in schema.sql file */
+        console.table(department); 
+    }
   });
   console.log("Start function has ended");
 };
