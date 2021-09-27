@@ -8,8 +8,12 @@ const employeeArr = [];
 const Start = () => {
   inquirer.prompt(menuPrompt).then((answers) => {
     console.log(`These are the ${answers}`);
-  });
+    console.table(department);
+    
 
+
+  });
+  console.log("Start function has ended");
 };
 
 Start();
