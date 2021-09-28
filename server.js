@@ -10,7 +10,7 @@ const employeeArr = [];
 /* Playing around with ways to make start function asynchronous*/
 const makeFuncAsync = util.promisify(Start)
 
-/* I need to make this async now! */
+
 const Start = () => {
   inquirer
   .prompt(menuPrompt)
@@ -20,9 +20,8 @@ const Start = () => {
 
     if (answers.mainMenu === "View All Departments") {
         /* Now I want to show the "department" table I created in the db folder.*/
-        /* console.table(department); <-- This does not work, I need to know how to fetch this data from another file. Is it just module.exports?  */
         console.log("Entered the if statement for View All Departments");
-        viewDepartment;
+        viewDepartment; /* using SQL queries I was able to view the contents of the "department" table. But now they appear regardless of the if statement. I need to make the Start function asynchronous I believe.*/
     }
   });
   console.log("Start function has ended");
