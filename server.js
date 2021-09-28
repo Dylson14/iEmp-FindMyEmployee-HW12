@@ -7,12 +7,13 @@ const employeeArr = [];
 
 const Start = () => {
   inquirer.prompt(menuPrompt).then((answers) => {
-        /* returns something weird like [object object] */
-        console.log( `These are the ${answers}`); 
+        /* inquirer is returning an object with key/values based on the names of the questions. So to read the data from your menu prompt you need the following console.log...*/
+        console.log( `You have selected: ${answers.mainMenu}`); 
 
     if (answers.mainMenu === "View All Departments") {
         /* the department table created in schema.sql file */
-        console.table(department); 
+        /* console.table(department);  */
+        console.log("Entered the if statement for View All Departments");
     }
   });
   console.log("Start function has ended");
