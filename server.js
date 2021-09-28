@@ -11,8 +11,8 @@ const Start = () => {
         console.log( `You have selected: ${answers.mainMenu}`); 
 
     if (answers.mainMenu === "View All Departments") {
-        /* the department table created in schema.sql file */
-        /* console.table(department);  */
+        /* Now I want to show the "department" table I created in the db folder.*/
+        /* console.table(department); <-- This does not work, I need to know how to fetch this data from another file. Is it just module.exports?  */
         console.log("Entered the if statement for View All Departments");
     }
   });
