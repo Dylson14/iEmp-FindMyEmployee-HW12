@@ -8,10 +8,6 @@ const viewDepartments = require("./db/sqlFuncs");
 /* This array will later contain all the employees created */
 const employeeArr = [];
 
-/* Playing around with ways to make start function asynchronous*/
-/* const makeFuncAsync = util.promisify(Start) */
-
-
 const Start = () => {
   inquirer.prompt(menuPrompt)
   .then((answers) => {
@@ -26,11 +22,7 @@ const Start = () => {
               console.log(answers.mainMenu);
 
     }
-      /* if (answers.mainMenu === "View All Departments") {
-         Now I want to show the "department" table I created in the db folder.
-        console.log("Entered the if statement for View All Departments");
-        viewDepartment; /* using SQL queries I was able to view the contents of the "department" table. But now they appear regardless of the if statement. I need to make the Start function asynchronous I believe.
-    } */
+      
   });
 
   console.log("Start function has ended");

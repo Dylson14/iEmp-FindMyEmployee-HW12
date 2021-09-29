@@ -3,7 +3,7 @@ const db = require("../connection");
 
 const viewDepartments = () => {
         db.query("SELECT * FROM department", function (err, results) {
-        console.log(results);
+        console.table(results);
     })
 };
 
