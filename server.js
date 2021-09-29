@@ -4,6 +4,7 @@ const util = require("util");
 const menuPrompt = require("./Prompts/menuPrompt");
 const connectDB = require("./connection");
 const viewDepartments = require("./db/sqlFuncs");
+const viewRoles = require("./db/sqlFuncs");
 
 /* This array will later contain all the employees created */
 const employeeArr = [];
@@ -20,6 +21,7 @@ const Start = () => {
 
       case "View All Roles":
               console.log(`You have selected: ${answers.mainMenu}`);
+              viewRoles();
                break;
 
       case "View All Employees":

@@ -7,4 +7,13 @@ const viewDepartments = () => {
     })
 };
 
+const viewRoles = () => {
+        db.query("SELECT * FROM role", function (err, results) {
+        console.table(results);
+    })
+};
+
+
+
 module.exports = viewDepartments;
+module.exports = viewRoles;
