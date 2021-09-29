@@ -12,10 +12,3 @@ const db = mysql.createConnection(
     console.log("connected to the main_db database")
 );
 
-/* Query databse */
-
-const viewDepartment = db.query("SELECT * FROM department", function (err, results) {
-    console.log(results);
-})
-
-module.exports = viewDepartment;

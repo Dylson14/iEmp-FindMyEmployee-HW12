@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const util = require("util");
 const menuPrompt = require("./Prompts/menuPrompt");
-const viewDepartment = require("./schema");
+const viewDepartment = require("./connection");
 
 /* This array will later contain all the employees created */
 const employeeArr = [];
@@ -12,18 +12,25 @@ const employeeArr = [];
 
 
 const Start = () => {
-  inquirer
-  .prompt(menuPrompt)
+  inquirer.prompt(menuPrompt)
   .then((answers) => {
-        /* inquirer is returning an object with key/values based on the names of the questions. So to read the data from your menu prompt you need the following console.log...*/
-        console.log( `You have selected: ${answers.mainMenu}`); 
+    /* first thing I want is to enter the switch case, then with their answers enter the respective case */
+    switch (answers) {
+      case answers.mainMenu:
+              console.log("You have selected " + answers.mainMenu);
+               break;
+      default: 
+              console.log("Default case entered");
+              console.log(answers);
 
-    if (answers.mainMenu === "View All Departments") {
-        /* Now I want to show the "department" table I created in the db folder.*/
-        console.log("Entered the if statement for View All Departments");
-        viewDepartment; /* using SQL queries I was able to view the contents of the "department" table. But now they appear regardless of the if statement. I need to make the Start function asynchronous I believe.*/
     }
+      /* if (answers.mainMenu === "View All Departments") {
+         Now I want to show the "department" table I created in the db folder.
+        console.log("Entered the if statement for View All Departments");
+        viewDepartment; /* using SQL queries I was able to view the contents of the "department" table. But now they appear regardless of the if statement. I need to make the Start function asynchronous I believe.
+    } */
   });
+
   console.log("Start function has ended");
 };
 
