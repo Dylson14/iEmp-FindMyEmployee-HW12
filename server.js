@@ -8,7 +8,7 @@ const viewDepartment = require("./schema");
 const employeeArr = [];
 
 /* Playing around with ways to make start function asynchronous*/
-const makeFuncAsync = util.promisify(Start)
+/* const makeFuncAsync = util.promisify(Start) */
 
 
 const Start = () => {
