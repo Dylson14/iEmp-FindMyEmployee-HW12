@@ -3,3 +3,9 @@ VALUES ("Sales"),
        ("Engineering"),
        ("Finance"),
        ("Legal");
+
+INSERT INTO role (title, salary, department_id)
+VALUES ("Sales"),
+       ("Engineering"),
+       ("Finance"),
+       ("Legal");

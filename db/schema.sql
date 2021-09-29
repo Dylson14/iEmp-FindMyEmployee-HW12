@@ -9,14 +9,14 @@ name VARCHAR(30) /* this will hold the department name */
 );
 
 CREATE TABLE role (
-    id INT PRIMARY KEY NOT NULL,
+    id AUTO_INCREMENT INT PRIMARY KEY NOT NULL,
     title VARCHAR(30), /* this will hold the role title */
     salary DECIMAL, /* this will hold the role salary */
     department_id INT NOT NULL /* to hold reference to department role belongs to */
 );
 
 CREATE TABLE employee (
-    id INT NOT NULL PRIMARY KEY,
+    id AUTO_INCREMENT INT NOT NULL PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL, /* to hold employee first name */
     last_name VARCHAR(30) NOT NULL, /* to hold employee last name */
     role_id INT NOT NULL, /* to hold reference to employee role */

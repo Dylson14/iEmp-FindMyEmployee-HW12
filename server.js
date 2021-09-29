@@ -17,6 +17,31 @@ const Start = () => {
               console.log(`You have selected: ${answers.mainMenu}`);
               viewDepartments();
                break;
+
+      case "View All Roles":
+              console.log(`You have selected: ${answers.mainMenu}`);
+               break;
+
+      case "View All Employees":
+              console.log(`You have selected: ${answers.mainMenu}`);
+               break;
+
+      case "Add A Department":
+              console.log(`You have selected: ${answers.mainMenu}`);
+               break;
+
+      case "Add A Role":
+              console.log(`You have selected: ${answers.mainMenu}`);
+               break;
+
+      case "Add An Employee":
+              console.log(`You have selected: ${answers.mainMenu}`);
+               break;
+
+      case "Update An Employee":
+              console.log(`You have selected: ${answers.mainMenu}`);
+               break;
+
       default: 
               console.log("Default case entered");
               console.log(answers.mainMenu);
