@@ -15,13 +15,13 @@ const Start = () => {
   inquirer.prompt(menuPrompt)
   .then((answers) => {
     /* first thing I want is to enter the switch case, then with their answers enter the respective case */
-    switch (answers) {
-      case answers.mainMenu:
-              console.log("You have selected " + answers.mainMenu);
+    switch (answers.mainMenu) {
+      case "View All Departments":
+              console.log(`You have selected ${answers.mainMenu}`);
                break;
       default: 
               console.log("Default case entered");
-              console.log(answers);
+              console.log(answers.mainMenu);
 
     }
       /* if (answers.mainMenu === "View All Departments") {
