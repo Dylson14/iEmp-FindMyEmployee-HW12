@@ -3,8 +3,7 @@ const inquirer = require("inquirer");
 const util = require("util");
 const menuPrompt = require("./Prompts/menuPrompt");
 const connectDB = require("./connection");
-const viewDepartments = require("./db/sqlFuncs");
-const viewRoles = require("./db/sqlFuncs");
+const {viewDepartments, viewRoles} = require("./db/queries");
 
 /* This array will later contain all the employees created */
 const employeeArr = [];
