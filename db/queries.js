@@ -18,4 +18,4 @@ const viewEmployees = () => [
 ]
 
 
-module.exports = {viewDepartments, viewRoles};
+module.exports = {viewDepartments, viewRoles, viewEmployees};

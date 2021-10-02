@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 const util = require("util");
 const menuPrompt = require("./Prompts/menuPrompt");
 const connectDB = require("./connection");
-const {viewDepartments, viewRoles} = require("./db/queries");
+const {viewDepartments, viewRoles, viewEmployees} = require("./db/queries");
 
 /* This array will later contain all the employees created */
 const employeeArr = [];
@@ -25,6 +25,7 @@ const Start = () => {
 
       case "View All Employees":
               console.log(`You have selected: ${answers.mainMenu}`);
+              viewEmployees();
                break;
 
       case "Add A Department":
