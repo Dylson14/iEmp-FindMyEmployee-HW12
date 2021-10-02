@@ -25,3 +25,4 @@ CREATE TABLE employee (
     manager_id INT NOT NULL, /* to hold reference to another employee that is the manager of the current employee (null if the employee has no manager)*/
     FOREIGN KEY (role_id) REFERENCES role (id)
 );
+
